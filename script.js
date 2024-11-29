@@ -17,6 +17,9 @@ let submit = document.querySelector('.submit');
 
 let numAnswer = 0;
 let contactMale;
+let arr = [];
+let resultArr;
+
 
 
 medium.addEventListener('click', ()=>{
@@ -81,7 +84,6 @@ contactMale = this.value
 submit.addEventListener('click', function (){
     if(contactMale == undefined) {
         fixContact.style.display = 'inline';
-        
     }   
     if(contactMale != undefined) {
         for (let answer of answerRadioButt) {
@@ -99,11 +101,12 @@ submit.addEventListener('click', function (){
             }
             // console.log(answer);
         }
-
+        arr.push(numAnswer);
+        resultArr = JSON.stringify(arr);
+        localStorage.setItem('completedArr', resultArr);
     alert(contactMale +' : '+ numAnswer + ' / 100');
     window.location.reload();
-}
-       
+}     
 }); 
 
 

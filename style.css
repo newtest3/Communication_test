@@ -95,6 +95,10 @@
 .mainContent {
    padding: 0 10px;
 }
+.viewer{
+   margin-left: -70px;
+   color: white;
+}
 .chooseLevel{
    font-size: 16px;
    font-family: Arial, Helvetica, sans-serif;
