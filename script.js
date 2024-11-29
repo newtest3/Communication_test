@@ -21,27 +21,56 @@ let contactMale;
 
 medium.addEventListener('click', ()=>{
     easyContent.style.display = 'none';
-    hardContent.style.display = 'none';
+    easy.style.boxShadow = 'none';
+    
     mediumContent.style.display = 'block';
+    medium.style.boxShadow = '5px 5px 4px rgb(150, 150, 2)';
+
+    hardContent.style.display = 'none';
+    hard.style.boxShadow = 'none';
+
     veryHardContent.style.display = 'none';
+    veryHard.style.boxShadow = 'none';
 });
+
 hard.addEventListener('click', ()=>{
     easyContent.style.display = 'none';
-    hardContent.style.display = 'block';
+    easy.style.boxShadow = 'none';
+
     mediumContent.style.display = 'none';
+    medium.style.boxShadow = 'none';
+
+    hardContent.style.display = 'block';
+    hard.style.boxShadow = '5px 5px 4px rgb(150, 3, 3)';
+
     veryHardContent.style.display = 'none';
+    veryHard.style.boxShadow = 'none';
 });
 veryHard.addEventListener('click', ()=>{
     easyContent.style.display = 'none';
-    veryHardContent.style.display = 'block';
+    easy.style.boxShadow = 'none';
+
     mediumContent.style.display = 'none';
+    medium.style.boxShadow = 'none';
+
     hardContent.style.display = 'none';
+    hard.style.boxShadow = 'none';
+
+    veryHardContent.style.display = 'block';
+    veryHard.style.boxShadow = '5px 5px 4px rgb(148, 39, 2)';
 });
 easy.addEventListener('click', ()=>{
     easyContent.style.display = 'block';
-    hardContent.style.display = 'none';
+    easy.style.boxShadow = '5px 5px 4px green';
+    
     mediumContent.style.display = 'none';
+    medium.style.boxShadow = 'none';
+
+    hardContent.style.display = 'none';
+    hard.style.boxShadow = 'none';
+
     veryHardContent.style.display = 'none';
+    veryHard.style.boxShadow = 'none';
 });
 
 contact.addEventListener('input', function (){

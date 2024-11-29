@@ -102,6 +102,7 @@
 }
 
 .mainButtons {
+   width: 200px;
 }
 .easy, .medium, .hard, .veryHard {
    margin: 10px 5px;
@@ -111,16 +112,21 @@
 }
 .easy{
    background-color: rgb(35, 253, 6);
+   box-shadow: 5px 5px 4px green;
 }
 .medium{
-   background-color: yellow;
+   background-color: rgb(251, 247, 24);
+   /* box-shadow: 5px 5px 4px rgb(150, 150, 2); */
 }
 .hard{
-   background-color: red;
+   background-color: rgb(252, 8, 8);
+   /* box-shadow: 5px 5px 4px rgb(150, 3, 3); */
 }
 .veryHard{
-   background-color: rgb(96, 26, 2);
+   background-color: rgb(114, 44, 20);
+   /* box-shadow: 5px 5px 4px rgb(148, 39, 2); */
    color: white;
+   font-size: 13px;
 }
 .contact{
    background-color: rgb(177, 248, 248);
