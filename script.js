@@ -1,12 +1,14 @@
 let easy = document.querySelector('.easy');
 let medium = document.querySelector('.medium');
 let hard = document.querySelector('.hard');
+let veryHard = document.querySelector('.veryHard');
 
 let fixContact = document.querySelector('.fixContact');
 
 let easyContent = document.querySelector('.easyContent');
 let mediumContent = document.querySelector('.mediumContent');
 let hardContent = document.querySelector('.hardContent');
+let veryHardContent = document.querySelector('.veryHardContent');
 let answerSpan = document.querySelector('.answerSpan');
 
 let contact = document.querySelector('.contact');
@@ -21,16 +23,25 @@ medium.addEventListener('click', ()=>{
     easyContent.style.display = 'none';
     hardContent.style.display = 'none';
     mediumContent.style.display = 'block';
+    veryHardContent.style.display = 'none';
 });
 hard.addEventListener('click', ()=>{
     easyContent.style.display = 'none';
     hardContent.style.display = 'block';
     mediumContent.style.display = 'none';
+    veryHardContent.style.display = 'none';
+});
+veryHard.addEventListener('click', ()=>{
+    easyContent.style.display = 'none';
+    veryHardContent.style.display = 'block';
+    mediumContent.style.display = 'none';
+    hardContent.style.display = 'none';
 });
 easy.addEventListener('click', ()=>{
     easyContent.style.display = 'block';
     hardContent.style.display = 'none';
     mediumContent.style.display = 'none';
+    veryHardContent.style.display = 'none';
 });
 
 contact.addEventListener('input', function (){
@@ -51,8 +62,11 @@ submit.addEventListener('click', function (){
             if(answer.value == '3' && answer.checked == true) {
                 numAnswer+=Number(answer.value);
             }
-            if(answer.value == '5' && answer.checked == true) {
+            if(answer.value == '4' && answer.checked == true) {
             numAnswer+=Number(answer.value);
+            }
+            if(answer.value == '5' && answer.checked == true) {
+                numAnswer+=Number(answer.value);
             }
             // console.log(answer);
         }
