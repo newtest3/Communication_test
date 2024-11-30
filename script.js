@@ -9,16 +9,21 @@ let easyContent = document.querySelector('.easyContent');
 let mediumContent = document.querySelector('.mediumContent');
 let hardContent = document.querySelector('.hardContent');
 let veryHardContent = document.querySelector('.veryHardContent');
-let answerSpan = document.querySelector('.answerSpan');
+let answerSpan = document.querySelectorAll('.answerSpan');
+let containerAnswer = document.querySelector('.containerAnswer');
+
+
 
 let contact = document.querySelector('.contact');
 let answerRadioButt = document.querySelectorAll('.answerRadioButt');
+let victory = document.querySelectorAll('.victory');
 let submit = document.querySelector('.submit');
 
 let numAnswer = 0;
 let contactMale;
 let arr = [];
 let resultArr;
+
 
 
 
@@ -81,10 +86,13 @@ contactMale = this.value
 });
 
 
-submit.addEventListener('click', function (){
+
+submit.addEventListener('click', function pressSubmit(){
+    
     if(contactMale == undefined) {
         fixContact.style.display = 'inline';
     }   
+ 
     if(contactMale != undefined) {
         for (let answer of answerRadioButt) {
             if(answer.value == '2' && answer.checked == true) {
@@ -99,14 +107,14 @@ submit.addEventListener('click', function (){
             if(answer.value == '5' && answer.checked == true) {
                 numAnswer+=Number(answer.value);
             }
-            // console.log(answer);
         }
-        arr.push(numAnswer);
-        resultArr = JSON.stringify(arr);
-        localStorage.setItem('completedArr', resultArr);
+        for(let vic of victory) {
+            vic.style.color = 'rgba(4, 252, 37, 0.578)';
+        }
     alert(contactMale +' : '+ numAnswer + ' / 100');
-    window.location.reload();
-}     
+    this.removeEventListener('click', pressSubmit);
+    // window.location.reload();
+    }     
 }); 
 
 

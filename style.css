@@ -95,14 +95,13 @@
 .mainContent {
    padding: 0 10px;
 }
-.viewer{
-   margin-left: -70px;
-   color: white;
-}
+
 .chooseLevel{
    font-size: 16px;
    font-family: Arial, Helvetica, sans-serif;
-   margin: 5px 0 5px 45px
+   margin: 5px 0 5px 45px;
+   /* background-color: rgba(4, 252, 37, 0.578); green */
+   /* background-color: rgba(253, 55, 55, 0.681); */
 }
 
 .mainButtons {
@@ -137,6 +136,8 @@
 .fixContact{
 display: none;
 color: red;
+font-size: 17px;
+font-weight: 600;
 }
 .easyContent {
 }
@@ -179,3 +180,6 @@ color: red;
    margin-bottom: 10px;
    margin-left: 100px;
 }
+/* input ~ span {
+   color: red;
+ } */
