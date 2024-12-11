@@ -108,12 +108,12 @@ submit.addEventListener('click', function pressSubmit(){
                 numAnswer+=Number(answer.value);
             }
         }
-        for(let vic of victory) {
-            vic.style.color = 'rgba(4, 252, 37, 0.578)';
-        }
+        // for(let vic of victory) {
+        //     vic.style.color = 'rgba(4, 252, 37, 0.578)'; // Added color style for correct answer
+        // }
     alert(contactMale +' : '+ numAnswer + ' / 100');
     this.removeEventListener('click', pressSubmit);
-    // window.location.reload();
+    window.location.reload();
     }     
 }); 
 
