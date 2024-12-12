@@ -11,7 +11,7 @@ let hardContent = document.querySelector('.hardContent');
 let veryHardContent = document.querySelector('.veryHardContent');
 let answerSpan = document.querySelectorAll('.answerSpan');
 let containerAnswer = document.querySelector('.containerAnswer');
-
+let mainButtons = document.querySelector('.mainButtons');
 
 
 let contact = document.querySelector('.contact');
@@ -24,6 +24,12 @@ let contactMale;
 let arr = [];
 let resultArr;
 
+
+let correctAnswerButton = document.createElement('button');
+
+correctAnswerButton.className = 'correctAnswerButton';
+correctAnswerButton.textContent = 'Correct answer';
+mainButtons.append(correctAnswerButton);
 
 
 
@@ -108,13 +114,20 @@ submit.addEventListener('click', function pressSubmit(){
                 numAnswer+=Number(answer.value);
             }
         }
-        // for(let vic of victory) {
-        //     vic.style.color = 'rgba(4, 252, 37, 0.578)'; // Added color style for correct answer
-        // }
+        
     alert(contactMale +' : '+ numAnswer + ' / 100');
     this.removeEventListener('click', pressSubmit);
-    window.location.reload();
+    // window.location.reload();
     }     
+    correctAnswerButton.style.display = 'block';
+
 }); 
+correctAnswerButton.addEventListener('click', function(){
+    for(let vic of victory) {
+        vic.style.color = 'rgba(4, 252, 37, 0.578)'; // Added color style for correct answer
+    }
+});
+
+
 
 
