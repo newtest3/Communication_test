@@ -29,14 +29,14 @@ let correctAnswerButton = document.createElement('button');
 
 correctAnswerButton.className = 'correctAnswerButton';
 correctAnswerButton.textContent = 'Correct answer';
-mainButtons.append(correctAnswerButton);
+// mainButtons.append(correctAnswerButton); // added button Correct answer
 
 
 
-medium.addEventListener('click', ()=>{
+medium.addEventListener('click', () => {
     easyContent.style.display = 'none';
     easy.style.boxShadow = 'none';
-    
+
     mediumContent.style.display = 'block';
     medium.style.boxShadow = '5px 5px 4px rgb(150, 150, 2)';
 
@@ -47,7 +47,7 @@ medium.addEventListener('click', ()=>{
     veryHard.style.boxShadow = 'none';
 });
 
-hard.addEventListener('click', ()=>{
+hard.addEventListener('click', () => {
     easyContent.style.display = 'none';
     easy.style.boxShadow = 'none';
 
@@ -60,7 +60,7 @@ hard.addEventListener('click', ()=>{
     veryHardContent.style.display = 'none';
     veryHard.style.boxShadow = 'none';
 });
-veryHard.addEventListener('click', ()=>{
+veryHard.addEventListener('click', () => {
     easyContent.style.display = 'none';
     easy.style.boxShadow = 'none';
 
@@ -73,10 +73,10 @@ veryHard.addEventListener('click', ()=>{
     veryHardContent.style.display = 'block';
     veryHard.style.boxShadow = '5px 5px 4px rgb(148, 39, 2)';
 });
-easy.addEventListener('click', ()=>{
+easy.addEventListener('click', () => {
     easyContent.style.display = 'block';
     easy.style.boxShadow = '5px 5px 4px green';
-    
+
     mediumContent.style.display = 'none';
     medium.style.boxShadow = 'none';
 
@@ -87,43 +87,43 @@ easy.addEventListener('click', ()=>{
     veryHard.style.boxShadow = 'none';
 });
 
-contact.addEventListener('input', function (){
-contactMale = this.value
+contact.addEventListener('input', function () {
+    contactMale = this.value
 });
 
 
 
-submit.addEventListener('click', function pressSubmit(){
-    
-    if(contactMale == undefined) {
+submit.addEventListener('click', function pressSubmit() {
+
+    if (contactMale == undefined) {
         fixContact.style.display = 'inline';
-    }   
- 
-    if(contactMale != undefined) {
+    }
+
+    if (contactMale != undefined) {
         for (let answer of answerRadioButt) {
-            if(answer.value == '2' && answer.checked == true) {
-                numAnswer+=Number(answer.value);
+            if (answer.value == '2' && answer.checked == true) {
+                numAnswer += Number(answer.value);
             }
-            if(answer.value == '3' && answer.checked == true) {
-                numAnswer+=Number(answer.value);
+            if (answer.value == '3' && answer.checked == true) {
+                numAnswer += Number(answer.value);
             }
-            if(answer.value == '4' && answer.checked == true) {
-            numAnswer+=Number(answer.value);
+            if (answer.value == '4' && answer.checked == true) {
+                numAnswer += Number(answer.value);
             }
-            if(answer.value == '5' && answer.checked == true) {
-                numAnswer+=Number(answer.value);
+            if (answer.value == '5' && answer.checked == true) {
+                numAnswer += Number(answer.value);
             }
         }
-        
-    alert(contactMale +' : '+ numAnswer + ' / 100');
-    this.removeEventListener('click', pressSubmit);
-    // window.location.reload();
-    }     
+
+        alert(contactMale + ' : ' + numAnswer + ' / 100');
+        this.removeEventListener('click', pressSubmit);
+        // window.location.reload();
+    }
     correctAnswerButton.style.display = 'block';
 
-}); 
-correctAnswerButton.addEventListener('click', function(){
-    for(let vic of victory) {
+});
+correctAnswerButton.addEventListener('click', function () {
+    for (let vic of victory) {
         vic.style.color = 'rgba(4, 252, 37, 0.578)'; // Added color style for correct answer
     }
 });
