@@ -117,7 +117,7 @@ submit.addEventListener('click', function pressSubmit() {
 
         alert(contactMale + ' : ' + numAnswer + ' / 100');
         this.removeEventListener('click', pressSubmit);
-        // window.location.reload();
+        window.location.reload();
     }
     correctAnswerButton.style.display = 'block';
 
